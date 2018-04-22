@@ -49,6 +49,10 @@
         #myName { font-size: 2rem; }
         #myList li h2 { font-size: 1rem; }
       }
+      
+      #portfolioWork p { font-size: 1.25rem; }
+      #portfolioWork p:nth-of-type(1) { font-size: 1.25rem; text-indent: 2rem; margin-top: 4rem; }
+      #tuittLink { text-decoration: underline; }
 
     </style>
   </head>
@@ -58,6 +62,36 @@
       <h1 id="myName"></h1>
       <ul id="myList"></ul>
     </div>
+
+    <div id="portfolioWork" class="container-fluid text-center">
+      <p>As an Aspiring Web Developer, I started out my journey by taking a Coding Bootcamp from <a id="tuittLink" href="https://tuitt.com/" target="_blank">Tuitt Inc.</a></p>
+      <p>Here's what I worked on during the Coding Bootcamp:</p>
+
+      <div class="card-group">
+        <div class="card embed-responsive">
+          <iframe class="embed-responsive-item" src="https://ricjamp023.github.io/homepage_CapstoneOne_v1.html"></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card embed-responsive">
+          <iframe src=""></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="card embed-responsive">
+          <iframe src=""></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -85,18 +119,36 @@
 
       function showIntroList(){
         var myListElem = document.getElementById('myList'),
-            myListItemsText = ["Aspiring Web Developer/Programmer", "Amateur Ludologist", "Lifelong Learner "];
-            node = document.createElement('li'),
-            h2_node = document.createElement('h2'),
-            textnode = document.createTextNode("");
+            myListItemsText = ["Aspiring Web Developer/Programmer", "Amateur Ludologist", "Lifelong Learner "],
+            node = new Array(3), 
+            h2node = new Array(3), 
+            textnode = new Array(3);
+              
+        for(var i = 0; i < 3; i++) {
+          //create variable contents
+          node[i] = document.createElement('li');
+          h2node[i] = document.createElement('h2');
+          textnode[i] = document.createTextNode(myListItemsText[i]);
 
-            h2_node.appendChild(textnode);
-            node.appendChild(h2_node);
-            node.classList.add('slideInRight', 'animated');
-            
-            setTimeout(function(){
-              myListElem.appendChild(node);
-            }, 2000);
+          //append corresponding variables to parent node
+          h2node[i].appendChild(textnode[i]);
+          node[i].appendChild(h2node[i]);
+        }
+
+        node[0].classList.add('slideInRight', 'animated');
+          setTimeout(function(){
+            myListElem.appendChild(node[0]);
+          }, 2000);
+        node[1].classList.add('slideInLeft', 'animated');
+          setTimeout(function(){
+            myListElem.appendChild(node[1]);
+          }, 3000);
+        node[2].classList.add('slideInUp', 'animated');
+          setTimeout(function(){
+            myListElem.appendChild(node[2]);
+          }, 4000);
+        
+
       }
 
 
