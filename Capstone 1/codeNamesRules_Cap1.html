@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tl;dr Codenames</title>
+
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Personal Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="css/styleNavbarBody.css">
+
+	<!-- Modal Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/styleModalForm.css">
+
+	<!-- Go To Top Button Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/style_toTop.css">
+
+	<style type="text/css">
+		/*Reset styles for non-sticky navbar and background*/
+		html, body {
+			background: none;
+			padding-top: 0;
+		}
+		.navbar-inverse {
+			margin-bottom: 0;
+		}
+		.pageContent {
+			padding-top: 70px;
+			padding-bottom: 70px;
+			background: url("images/Codenames/codenamesPageBg.png") no-repeat fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: 100% 100%;
+		}
+		/*Split converged background horizontally in half on mobile*/
+		@media (max-width: 768px) {
+			.pageContent {
+				padding-top: 0;
+			}
+			.leftBg {
+				padding-top: 0;
+				height: 300px;
+			}
+			.rightBg {
+				padding-top: 0;
+				height: 300px;
+			}
+		}
+		.pageRules {
+			background-color: #ffffe5;
+		}
+		.pageRules>.row img {
+			margin-top: 10px;
+		}
+		.page-header {
+			border-bottom: none;
+		}
+		.overview {
+			border-top: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+		.overview h2 {
+			text-decoration: underline;
+		}
+		.overviewTxt {
+			padding: 10px;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+		.team {
+			border-bottom: 2px solid black;
+		}
+		.blueTeam {
+			border-right: 3px double black;			
+		}
+		.redTeam {
+			border-left: 3px double black;
+		}
+		.redTeam img {
+			display: block;
+			margin: 0 auto;
+			height: 250px;
+		}	
+		.blueTeam img {
+			display: block;
+			margin: 0 auto;
+			height: 250px;
+		}
+		.doubleAgents {
+			border-bottom: 2px solid black;		
+		}
+		.doubleAgents img {
+			margin: 0 auto;
+		}	
+		.bystanders {
+			border-bottom: 2px solid black;		
+		}
+		.bystanders img {
+			margin: 0 auto;
+		}		
+		.assassin {
+			border-bottom: 2px solid black;
+		}
+		.assassin img {
+			margin: 0 auto;
+		}
+		.idealSetup img {
+			margin: 0 auto;
+			margin-bottom: 10px;
+			height: 400px;
+		}
+		.idealSetup h4 {
+			margin-top: 150px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0;
+		}
+		@media (max-width: 992px) {
+			.idealSetup h4 {
+			margin-top: 20px;
+			}
+		}
+		.gamePlayHeader {
+			border-top: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+			<div class="container-fluid">			
+				<!-- Navbar header -->
+				<div class="navbar-header">
+					<!-- Logo image and Website Name -->
+					<div class="navbar-brand text-center"> <!-- CSS: Set brand to center when on mobile -->
+						<img src="images/Homepage/leftHalfMeeple.png">
+						<ul class="siteName">
+							<li>tl;dr</li>
+							<li>gameRules</li>
+						</ul>
+						<img src="images/Homepage/rightHalfMeeple.png">
+					</div>
+					<!-- Toggle button -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMenuLinks" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+			  	        <span class="icon-bar"></span>
+			  	        <span class="icon-bar"></span>
+			  	        <span class="icon-bar"></span>					
+					</button>
+				</div> <!-- navbar header -->
+				<!-- Collapsible Menu -->
+				<div class="collapse navbar-collapse navbar-right" id="navMenuLinks">
+					<ul class="nav navbar-nav">
+						<!-- Drop Down Menu for Games List -->
+						<li class="dropdown navMainLi navLinkGames">
+							<a href="#" class="dropdown-toggle navMainLi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games List <span class="caret"></span></a>
+							<ul class="dropdown-menu dropDownGameList">
+								<li id="partyGame"><a href="partyGames_Cap1.html">Party Board Games</a></li>
+								<li id="stratGame"><a href="stratGames_Cap1.html">Strategy Board Games</a></li>
+							</ul>
+						</li> <!-- drop down games list -->
+						<li class="navMainLi navLinkHome"><a href="homepage-tldr.html">Home</a></li>
+						<li class="navMainLi navLinkAbout"><a href="aboutPage_Cap1.html">About</a></li>
+						<!-- Contact Form Modal Button-->
+						<li class="navMainLi navLinkContact">
+							<!-- Use a link instead of button to keep styles -->
+							<a id="contactBtn" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a>
+							<!-- Above attributes used to auto-close toggle menu when collapsed -->
+						</li>
+					</ul>
+				</div>
+			</div> <!-- container fluid -->
+		</nav> 
+	<!-- Modal Contact Form, thank you w3schools -->
+	<div id="modalContactForm" class="modal">
+		<div class="modal-content">
+			<!-- Modal Close Button -->
+			<span class="closeForm">&times</span>
+			<!-- Contact Form -->
+				<div class="container formContainer">
+					<form>
+						<h4 class="text-center">Want us to add a game?<br>Comments or Suggestions?</h4>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Subject">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Game Suggestions" rows="7"></textarea>
+						</div> <!-- form-group -->
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+		</div>
+	</div>
+	
+	<div class="pageContent container-fluid">
+		<div class="row">
+			<div class="leftBg col-sm-2 col-xs-6">
+			</div>
+			<div class="rightBg col-sm-2 col-xs-6 col-sm-push-8">
+			</div>
+			<div class="pageRules col-sm-8 col-sm-pull-2 col-xs-12">
+				<div class="page-header text-center	">
+					<h1>Codenames</h1>					
+				</div>
+				<!-- Grab images of each component from BGG -->
+				<div class="overview row text-center">
+					<h2>Overview & Setup</h2>
+					<p class="overviewTxt">Climb a tree, wait for a fireman jump to fireman then scratch his face lick left leg for ninety minutes, still dirty use lap as chair if it fits, i sits man running from cops stops to pet cats, goes to jail cough furball so kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+				</div>				
+				<div class="team row">
+					<!-- Blue Team -->
+					<div class="blueTeam col-xs-6 text-center">
+						<img class="img-responsive" src="images/Codenames/blueTeam.png">
+						<h3>The Blue Team</h3>
+						<p>These cards are placed in front of their spymaster</p>
+					</div>
+					<!-- Red Team -->
+					<div class="redTeam col-xs-6 text-center">
+						<img class="img-responsive" src="images/Codenames/redTeam.png">
+						<h3>The Red Team</h3>
+						<p>These cards are placed in front of their spymaster</p>
+					</div>
+				</div>
+				<div class="doubleAgents row text-center">
+					<div class="col-xs-12">
+						<img class="img-responsive" src="images/Codenames/doubleAgents.png">
+						<h3>The Double Agent</h3>
+						<p>The Double agent belongs to the starting team. This means they have to guess one word more than their opponent.</p>
+					</div>
+				</div>
+				<div class="bystanders row text-center">
+					<div class="col-xs-12">
+						<img class="img-responsive" src="images/Codenames/bystander.png">
+						<h3>Innocent Bystanders</h3>
+						<p>These guys simply bother each team from identifying their members.</p>
+					</div>
+				</div>
+				<div class="assassin row text-center">
+					<div class="col-xs-12">
+						<img class="img-responsive" src="images/Codenames/assassin.png">
+						<h3>The Assassin</h3>
+						<p>Guess the Assassin and your team instantly loses.</p>
+					</div>
+				</div>
+				<div class="idealSetup row text-center">
+					<div class="col-md-6 col-xs-12">
+						<img src="images/Codenames/setup.png">
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<h4>Ideal Setup as shown in the rulebook</h4>
+						<p>Purr while eating climb a tree, wait for a fireman jump to fireman then scratch his face. You are a captive audience while sitting on the toilet</p>
+					</div>
+				</div>
+				<div class="gamePlayHeader page-header text-center">
+					<h2>Game Play</h2>
+				</div>
+				<div class="row text-center" style="padding: 20px">
+					<p>Groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked all of a sudden cat goes crazy hiding behind the couch until lured out by a feathery toy or ears back wide eyed and sometimes switches in french and say "miaou" just because well why not but small kitty warm kitty little balls of fur, eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap. Gate keepers of hell all of a sudden cat goes crazy, or annoy kitten brother with poking but shove bum in owner's face like camera lens. Cough furball into food bowl then scratch owner for a new one refuse to leave cardboard box or love to play with owner's hair tie. My left donut is missing, as is my right. Cough meoooow or pee in the shoe wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again. Terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed munch on tasty moths or disappear for four days and return home with an expensive injury; bite the vet.</p>
+				</div>
+			</div> <!-- .pageRules -->
+		</div> <!-- row -->
+	</div>
+	<hr class="styledHrWhite">
+	<!-- Footer: Mission Statement-->
+	<footer class="text-center">
+		<div class="container footerContent">
+			<div class="row">
+				<!-- Credits Section; full width on small devices -->
+				<div class="col-md-6 col-xs-12 creditsTxt">
+					<h4>Credits:</h4>
+					<p>Images: All credits for the images belong to the images in BGG (boardgamegeek.com), provided by the image's respective publisher.</p>
+					<p>Content Description: Content Description taken from BGG (boardgamegeek.com).</p>
+					<p>Disclaimer: tl;dr gameRules does not seek to profit from this website and promotes each game with links to bgg and their corresponding publisher.</p>
+				</div>
+				<!-- Contact Form, full width on mobile -->
+				<div class="col-md-6 col-xs-12 text-center" id="contactFormHome">
+					<p class="footerTxt">Let's make Modern Board Games more accessible.<br> More players, less lonely gamers, less dust in our game boxes. :P</p>
+				</div>
+			</div> <!-- Row -->
+		</div> <!-- footerContent -->
+	</footer>
+
+	<a href="#" class="go-top">Go Top</a>
+
+	<!-- Jquery and Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Modal Contact Form JS -->
+	<script type="text/javascript" src="scripts/modalContactForm.js"></script>
+	<!-- Go to top JS -->
+	<script type="text/javascript" src="scripts/toTop.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About: tl;dr gameRules</title>
+
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<style type="text/css">
+
+		.aboutSite {
+			margin-top: 30px;
+			color: white;
+			background-color: #4A4E51;
+		}
+
+		.aboutSiteHead {
+			display: inline-block;
+			font-size: 3em;
+			text-decoration: underline;
+		}
+
+		.aboutSiteTxt {
+			display: inline-block;
+			padding: 5px;
+		}
+
+	</style>
+
+	<!-- Personal Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="css/styleNavbarBody.css">
+	<!-- siteName Font -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+	<!-- Modal Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/styleModalForm.css">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">			
+				<!-- Navbar header -->
+				<div class="navbar-header">
+					<!-- Logo image and Website Name -->
+					<div class="navbar-brand text-center"> <!-- CSS: Set brand to center when on mobile -->
+						<img src="images/Homepage/leftHalfMeeple.png">
+						<ul class="siteName">
+							<li>tl;dr</li>
+							<li>gameRules</li>
+						</ul>
+						<img src="images/Homepage/rightHalfMeeple.png">
+					</div>
+					<!-- Toggle button -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMenuLinks" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+			  	        <span class="icon-bar"></span>
+			  	        <span class="icon-bar"></span>				
+					</button>
+				</div> <!-- navbar header -->
+				<!-- Collapsible Menu -->
+				<div class="collapse navbar-collapse navbar-right" id="navMenuLinks">
+					<ul class="nav navbar-nav">
+						<!-- Drop Down Menu for Games List -->
+						<li class="dropdown navMainLi navLinkGames">
+							<a href="#" class="dropdown-toggle navMainLi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games List <span class="caret"></span></a>
+							<ul class="dropdown-menu dropDownGameList">
+								<li id="partyGame"><a href="partyGames_Cap1.html">Party Board Games</a></li>
+								<li id="stratGame"><a href="stratGames_Cap1.html">Strategy Board Games</a></li>
+							</ul>
+						</li> <!-- drop down games list -->
+						<li class="navMainLi navLinkAbout"><a href="homepage-tldr.html">Home</a></li>
+						<!-- Contact Form Modal Button-->
+						<li class="navMainLi navLinkContact">
+							<!-- Use a link instead of button to keep styles -->
+							<a id="contactBtn" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a>
+							<!-- Above attributes used to auto-close toggle menu when collapsed -->
+						</li>
+					</ul>
+				</div>
+			</div> <!-- container fluid -->
+		</nav> 
+
+	<!-- Modal Contact Form, thank you w3schools -->
+	<div id="modalContactForm" class="modal">
+		<div class="modal-content">
+			<!-- Modal Close Button -->
+			<span class="closeForm">&times</span>
+			<!-- Contact Form -->
+				<div class="container formContainer">
+					<form>
+						<h4 class="text-center">Want us to add a game?<br>Comments or Suggestions?</h4>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Subject">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Game Suggestions" rows="7"></textarea>
+						</div> <!-- form-group -->
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+		</div>
+	</div>
+
+	<div class="container text-center aboutSite">
+		<h2 class="aboutSiteHead">About this Site</h2>
+		<div class="container">	
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="aboutSiteTxt">This site was made to comply with Tuitt Coding Bootcamp's Capstone 1 Requirements.</p>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="aboutSiteTxt">I'll probably use this as a template for making an app on android. Someday.</p>	
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="aboutSiteTxt" style="font-size: 10px;">P.S. <br> It was also made as a selfish project to have my board games' rules on-hand at all times.</p>	
+				</div>
+			</div>
+		</div>
+		<h2 class="aboutSiteHead">Credits</h2>
+		<div class="container">	
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<h4>Board Game Images:</h4>
+					<p class="aboutSiteTxt">All credits for the images belong to the images in BGG (boardgamegeek.com), provided by the image's respective publisher.</p>	
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<h4>Other Images:</h4>
+					<p class="aboutSiteTxt">Alexander Andrews on Unsplash for the cat picture.</p>	
+					<p class="aboutSiteTxt"> Free Vectors via <a href="https://www.Vecteezy.com/">Vecteezy!</a> for the Spy Background.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4>Content Description:</h4>
+					<p class="aboutSiteTxt">Content Description from BGG (boardgamegeek.com) and any rules about a board game based on interpretation from this website author.</p>	
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12">
+					<h4>Disclaimer:</h4>
+					<p class="aboutSiteTxt">tl;dr gameRules does not seek to profit from this website and promotes each game with links to bgg and their corresponding publisher.</p>	
+				</div>
+			</div>	
+		</div>
+
+	</div>
+
+	<!-- Jquery and Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Modal Contact Form JS -->
+	<script type="text/javascript" src="scripts/modalContactForm.js"></script>
+
+</body>
+</html>

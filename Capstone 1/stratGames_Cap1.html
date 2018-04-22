@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tl;dr Strategy Games</title>
+
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Personal Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="css/gamesList.css">
+	<link rel="stylesheet" type="text/css" href="css/styleNavbarBody.css">
+
+	<!-- Modal Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/styleModalForm.css">
+
+	<style type="text/css">
+
+		html, body {
+			/*Alternate Bg here: 
+			1. images/the-bridge-chess-gameplay.jpg
+			2. http://www.blirk.net/wallpapers/preview/chess-wallpaper-1.jpg
+			3. http://3.bp.blogspot.com/-A9dbVrNEC4A/TtdzMw1PluI/AAAAAAAAXwk/cWWTG6xmvl8/s1600/Chess+Wallpapers+%25284%2529.jpg
+			*/
+			background: url(images/the-bridge-chess-gameplay.jpg) no-repeat center center fixed; 	
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;		
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">			
+				<!-- Navbar header -->
+				<div class="navbar-header">
+					<!-- Logo image and Website Name -->
+					<div class="navbar-brand text-center"> <!-- CSS: Set brand to center when on mobile -->
+						<img src="images/Homepage/leftHalfMeeple.png">
+						<ul class="siteName">
+							<li>tl;dr</li>
+							<li>gameRules</li>
+						</ul>
+						<img src="images/Homepage/rightHalfMeeple.png">
+					</div>
+					<!-- Toggle button -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMenuLinks" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+			  	        <span class="icon-bar"></span>
+			  	        <span class="icon-bar"></span>
+			  	        <span class="icon-bar"></span>					
+					</button>
+				</div> <!-- navbar header -->
+				<!-- Collapsible Menu -->
+				<div class="collapse navbar-collapse navbar-right" id="navMenuLinks">
+					<ul class="nav navbar-nav">
+						<!-- Drop Down Menu for Games List -->
+						<li class="dropdown navMainLi navLinkGames">
+							<a href="#" class="dropdown-toggle navMainLi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games List <span class="caret"></span></a>
+							<ul class="dropdown-menu dropDownGameList">
+								<li id="partyGame"><a href="partyGames_Cap1.html">Party Board Games</a></li>
+							</ul>
+						</li> <!-- drop down games list -->
+						<li class="navMainLi navLinkHome"><a href="homepage-tldr.html">Home</a></li>
+						<li class="navMainLi navLinkAbout"><a href="aboutPage_Cap1.html">About</a></li>
+						<!-- Contact Form Modal Button-->
+						<li class="navMainLi navLinkContact">
+							<!-- Use a link instead of button to keep styles -->
+							<a id="contactBtn" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a>
+							<!-- Above attributes used to auto-close toggle menu when collapsed -->
+						</li>
+					</ul>
+				</div>
+			</div> <!-- container fluid -->
+		</nav> 
+	<!-- Modal Contact Form, thank you w3schools -->
+	<div id="modalContactForm" class="modal">
+		<div class="modal-content">
+			<!-- Modal Close Button -->
+			<span class="closeForm">&times</span>
+			<!-- Contact Form -->
+				<div class="container formContainer">
+					<form>
+						<h4 class="text-center">Want us to add a game?<br>Comments or Suggestions?</h4>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Subject">
+						</div> <!-- form-group -->
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Game Suggestions" rows="7"></textarea>
+						</div> <!-- form-group -->
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+		</div>
+	</div> 	
+	<div class="listContent container text-center">
+		<div class="row">
+			<div class="col-xs-12">	
+				<h1 class="listHeader">Strategy Games</h1>
+				<br><br>
+					<div class="media gameChoice">
+						<div class="media-left media-middle">
+							<img src="https://cf.geekdo-images.com/images/pic1176894.jpg">
+						</div>
+						<div class="media-body gameInfo">
+							<h4 class="media-heading">
+							The Castles of Burgundy
+								<small>
+									(2011)
+									<br>
+									2-4 Players: Best with 2
+									<br>
+									<a href="https://boardgamegeek.com/boardgame/84876/castles-burgundy">BGG Link</a>
+									<br>
+									<a href="https://www.ravensburger.com/us/shop/games/strategy-games/the-castles-of-burgundy-81243/index.html">Publisher: Ravensburger</a>
+								</small>
+							</h4>
+							<p>The Loire Valley during the 15th Century. As influential princes, the players devote their efforts to careful trading and building in order to lead their estates to prominence.</p>
+							<p>Two dice set out the action options, but the players always make the final choices. Whether trading or livestock farming, city building or scientific research, many different paths lead to prosperity and prominence of the players!</p>
+							<p>The many ways to gain victory points in this building game require careful thought round after round along with extensive planning ahead. Thanks to the different estates, the game remains challenging for the players for a long time, as no two games play out alike.</p>
+							<p>The winner is the player with the most victory points at the end of the game.</p>
+
+							<a href="castlesOfBurgundyRules_Cap1.html" class="btn btn-default" role="button">Rules</a>
+						</div>
+					</div>
+				</div> <!-- Col -->
+			</div> <!-- Row -->
+	</div> <!-- Header and Media Object-->
+	<hr class="styledHrWhite">
+	<footer class="text-center">
+		<div class="container footerContent">
+			<div class="row">
+				<!-- Credits Section; full width on small devices -->
+				<div class="col-md-6 col-xs-12 creditsTxt">
+					<h4>Credits:</h4>
+					<p>Images: All credits for the images belong to the images in BGG (boardgamegeek.com), provided by the image's respective publisher.</p>
+					<p>Content Description: Content Description taken from BGG (boardgamegeek.com).</p>
+					<p>Disclaimer: tl;dr gameRules does not seek to profit from this website and promotes each game with links to bgg and their corresponding publisher.</p>
+				</div>
+				<!-- Contact Form, full width on mobile -->
+				<div class="col-md-6 col-xs-12 text-center" id="contactFormHome">
+					<p class="footerTxt">Let's make Modern Board Games more accessible.<br> More players, less lonely gamers, less dust in our game boxes. :P</p>
+				</div>
+			</div> <!-- Row -->
+		</div> <!-- footerContent -->
+	</footer>
+	
+	<!-- Jquery and Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Modal Contact Form JS -->
+	<script type="text/javascript" src="scripts/modalContactForm.js"></script>
+	<!-- Go to top JS -->
+	<script type="text/javascript" src="scripts/toTop.js"></script>
+
+</body>
+</html>

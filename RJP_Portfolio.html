@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- Animate CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
@@ -19,7 +21,7 @@
       }
 
       html { 
-        background: url('resources/portfolio-bg/paul-morris-195110-unsplash.jpg') no-repeat center center fixed; 
+        background: url('resources/portfolio-bg/astronomy-dark-evening-176851.jpg') no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -28,12 +30,22 @@
         font-size: 1rem;
       }
 
-      html * { background: transparent; color:white!important; font-family: 'Simplifica'; }
+      html * { background: transparent!important; color:white!important; font-family: 'Simplifica'; }
 
       #mainContainer { margin-left: 3rem; margin-top: 6rem; }
       #myName { font-size: 5rem; font-weight: 300; line-height: 1.2; }
       #myList { margin-top: 3rem; margin-left: 3rem; }
       #myList li { margin-top: 2rem; }
+      #selfLinks { display:none; }
+
+      #portfolioWork { display: none; }
+      #portfolioWork p { font-size: 1.25rem; }
+      #portfolioWork p:last-child { margin-bottom: 3rem; }
+      #portfolioWork .courseIntroTxt { margin-top: 4rem; }
+      #moocIntroTxt { margin: auto 4rem; }
+
+      #portfolioWork a { text-decoration: underline!important; }
+      .card { border-color: white; }
 
       @media only screen and (max-width: 1100px) { 
         #myName { font-size: 3.5rem; }
@@ -49,48 +61,59 @@
         #myName { font-size: 2rem; }
         #myList li h2 { font-size: 1rem; }
       }
-      
-      #portfolioWork p { font-size: 1.25rem; }
-      #portfolioWork p:nth-of-type(1) { font-size: 1.25rem; text-indent: 2rem; margin-top: 4rem; }
-      #tuittLink { text-decoration: underline; }
 
     </style>
   </head>
   <body>
     
-    <div id="mainContainer" class="container text-left">
-      <h1 id="myName"></h1>
-      <ul id="myList"></ul>
+    <div id="mainContainer" class="container-fluid text-left">
+    	<div class="row">
+    		<div class="col">
+      			<h1 id="myName"></h1>
+      			<ul id="myList"></ul>
+    		</div>
+    		<div id="selfLinks" class="col-sm-4 text-center">
+    			<h2>Look me up on</h2>
+    			<h4><a href="">Github</a> <i class="fab fa-github"></i></h4>
+    			<h4><a href="">Linked</a> <i class="fab fa-linkedin"></i></h4>
+    		</div>
+    	</div>
     </div>
 
     <div id="portfolioWork" class="container-fluid text-center">
-      <p>As an Aspiring Web Developer, I started out my journey by taking a Coding Bootcamp from <a id="tuittLink" href="https://tuitt.com/" target="_blank">Tuitt Inc.</a></p>
+      <p class="courseIntroTxt">As an Aspiring Web Developer, I started out my journey by taking a Coding Bootcamp from <a id="tuittLink" href="https://tuitt.com/" target="_blank">Tuitt Inc.</a></p>
       <p>Here's what I worked on during the Coding Bootcamp:</p>
 
-      <div class="card-group">
-        <div class="card embed-responsive">
-          <iframe class="embed-responsive-item" src="https://ricjamp023.github.io/homepage_CapstoneOne_v1.html"></iframe>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Capstone 1<br><a href="Capstone 1/homepage-tldr.html">tl;dr gameRules</a></h5>
+          <p class="card-text">A website for simplified rules for various board games.</p>
+          <p class="card-text">Skills Learned: HTML & CSS (Twitter Bootstrap 3)</p>
         </div>
-        <div class="card embed-responsive">
-          <iframe src=""></iframe>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Capstone 2<br><a href="#">The Book Thrift</a></h5>
+          <p class="card-text">An E-Commerce website that sells pre-loved books.</p>
+          <p class="card-text">Skills Learned: Javascript, PHP, MySQL/MariaDB</p>
         </div>
-        <div class="card embed-responsive">
-          <iframe src=""></iframe>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Capstone 3<br><a href="#">Meow'nder</a></h5>
+          <p class="card-text">A Blog Site for users to post their day-to-day interactions with cats they meet.</p>
+          <p class="card-text">Skills Learned: Laravel Framework</p>
         </div>
       </div>
     </div>
+
+      <p id="moocIntroTxt" class="courseIntroTxt">Continuing from what I learned at Tuitt, I am in the process of learning from a variety of online resources (MOOCs).</p>
+      <p>Currently, I'm going through Udemy developer courses.</p>
+
+    </div>
+
+
       
 
     <!-- Optional JavaScript -->
@@ -119,7 +142,7 @@
 
       function showIntroList(){
         var myListElem = document.getElementById('myList'),
-            myListItemsText = ["Aspiring Web Developer/Programmer", "Amateur Ludologist", "Lifelong Learner "],
+            myListItemsText = ["Aspiring Web Developer/Programmer", "Passionate Ludophile", "Lifelong Learner "],
             node = new Array(3), 
             h2node = new Array(3), 
             textnode = new Array(3);
@@ -136,18 +159,28 @@
         }
 
         node[0].classList.add('slideInRight', 'animated');
-          setTimeout(function(){
-            myListElem.appendChild(node[0]);
-          }, 2000);
+        	setTimeout(function(){
+            	myListElem.appendChild(node[0]);
+        	}, 2000);
         node[1].classList.add('slideInLeft', 'animated');
-          setTimeout(function(){
-            myListElem.appendChild(node[1]);
-          }, 3000);
+        	setTimeout(function(){
+        		myListElem.appendChild(node[1]);
+        	}, 3000);
         node[2].classList.add('slideInUp', 'animated');
-          setTimeout(function(){
-            myListElem.appendChild(node[2]);
-          }, 4000);
-        
+	        setTimeout(function(){
+	        	myListElem.appendChild(node[2]);
+	        }, 4000);
+        var selflinks = document.getElementById('selfLinks');
+        selflinks.classList.add('lightSpeedIn', 'animated');
+        	setTimeout(function(){
+        	  selflinks.style.display = "block";
+        	},5000);
+
+        var portfolioWork = document.getElementById('portfolioWork');
+        portfolioWork.classList.add('fadeIn', 'animated');
+          	setTimeout(function(){
+            	portfolioWork.style.display = "block";
+          	},6000);
 
       }
 
