@@ -29,19 +29,20 @@
         -o-background-size: cover;
         background-size: cover;
         /*Responsive fonts*/
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
-      html * { background: transparent!important; color:white!important; font-family: 'Simplifica', 'Roboto', sans-serif; }
+      html * { background: transparent!important; color:white!important; font-family: 'Simplifica', 'Roboto', sans-serif; font-weight: 500; line-height: 1.2; }
 
-      #mainContainer { margin-left: 3rem; margin-top: 6rem; }
-      #myName { font-size: 5rem; font-weight: 300; line-height: 1.2; }
+      #mainContainer { margin-top: 5rem; }
+      #namelist { margin-left: 3rem;  }
+      #myName { font-size: 6rem; }
       #myList { margin-top: 3rem; margin-left: 3rem; }
       #myList li { margin-top: 2rem; }
       #selfLinks { display:none; }
 
       #portfolioWork { display: none; }
-      #portfolioWork p { font-size: 1.25rem; }
+      #portfolioWork p { font-size: 1.5rem; }
       #portfolioWork p:last-child { margin-bottom: 3rem; }
       #portfolioWork .courseIntroTxt { margin-top: 4rem; }
       #moocIntroTxt { margin: auto 4rem; }
@@ -50,18 +51,21 @@
       .card { border-color: white; }
 
       @media only screen and (max-width: 1100px) { 
-        #myName { font-size: 3.5rem; }
-        #myList li h2 { font-size: 2rem; }
+        #myName { font-size: 5rem; }
+        #myList li h2 { font-size: 2.5rem; }
       }
       /*Medium devices (tablets, 768px and up)*/
       @media only screen and (max-width: 768px) { 
-        #myName { font-size: 2.5rem; }
-        #myList li h2 { font-size: 1.5rem; }
+        #myName { font-size: 4rem; }
+        #myList li h2 { font-size: 2rem; }
       }
       /*Small devices (landscape phones, 576px and up)*/
       @media only screen and (max-width: 576px) { 
-        #myName { font-size: 2rem; }
-        #myList li h2 { font-size: 1rem; }
+      	#namelist { margin-bottom: 2.5rem; }
+      	#namelist h1 { margin-left: auto; text-align: center; }
+      	#myList { margin-top: 1.5rem; margin-left: auto; }
+        #myName { font-size: 3.5rem; }
+        #myList li h2 { font-size: 1.75rem; }
       }
 
     </style>
@@ -70,11 +74,11 @@
     
     <div id="mainContainer" class="container-fluid text-left">
     	<div class="row">
-    		<div class="col">
+    		<div id="namelist" class="col">
       			<h1 id="myName"></h1>
       			<ul id="myList"></ul>
     		</div>
-    		<div id="selfLinks" class="col-sm-4 text-center">
+    		<div id="selfLinks" class="col-lg-4 text-center">
     			<h2>Look me up on</h2>
     			<h4><a href="https://github.com/ricjamp023" target="_blank">Github</a> <i class="fab fa-github"></i></h4>
     			<h4><a href="https://www.linkedin.com/in/richard-james-pepito-0a461011a/" target="_blank">Linked</a> <i class="fab fa-linkedin"></i></h4>
@@ -90,21 +94,21 @@
     <div class="card-group">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Capstone 1<br><a href="Capstone 1/homepage-tldr.html" target="_blank">tl;dr gameRules</a></h5>
+          <h3 class="card-title">Capstone 1<br><a href="Capstone 1/homepage-tldr.html" target="_blank">tl;dr gameRules</a></h3>
           <p class="card-text">A website for simplified rules for various board games.</p>
-          <p class="card-text">Skills/Tools Learned: HTML & CSS (Twitter Bootstrap 3)</p>
+          <p class="card-text">Skills/Tools Learned: HTML & CSS</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Capstone 2<br><a href="#" target="_blank">The Book Thrift</a></h5>
+          <h3 class="card-title">Capstone 2<br><a href="#" target="_blank">The Book Thrift</a></h3>
           <p class="card-text">An E-Commerce website that sells pre-loved books.</p>
           <p class="card-text">Skills/Tools Learned: Javascript, AJAX, PHP, MySQL/MariaDB</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Capstone 3<br><a href="#" target="_blank">Meow'nder</a></h5>
+          <h3 class="card-title">Capstone 3<br><a href="#" target="_blank">Meow'nder</a></h3>
           <p class="card-text">A Blog Site for users to post their day-to-day interactions with cats they meet.</p>
           <p class="card-text">Skills/Tools Learned: Laravel Framework</p>
         </div>
