@@ -1,3 +1,3 @@
 # My Beginner Web Developer Portfolio
 
-https://tinyurl.com/rjdevp023
+Check it out here : https://tinyurl.com/rjdevp023
